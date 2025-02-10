@@ -15,11 +15,7 @@ const app = express();
 connectDB();
 
 const corsOptions = {
-  origin: [
-    'https://minima-app-frontend.vercel.app',
-    'http://localhost:3000',
-    "https://minima-front-coral.vercel.app"
-  ],
+  origin: "*",
   credentials: true,
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization']
