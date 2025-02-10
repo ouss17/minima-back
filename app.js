@@ -16,9 +16,6 @@ dotenv.config();
 
 var app = express();
 
-// Connect to MongoDB
-connectDB();
-
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
@@ -27,12 +24,15 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // Configure CORS
 app.use(cors({ 
-  origin: ['https://minima-front-coral.vercel.app'],
+  origin: ['https://minima-front-coral.vercel.app', 'https://minima-front-coral.vercel.app/auth'],
   credentials: true,
   exposedHeaders: ["set-cookie"],
 }));
 app.use(helmet());
 app.use(bodyParser.json());
+// Connect to MongoDB
+connectDB();
+
 
 // Rate limiting
 var limiter = rateLimit({
