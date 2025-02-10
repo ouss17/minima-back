@@ -26,13 +26,11 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 // Configure CORS
-var corsOptions = {
+app.use(cors({ 
   origin: "*",
   credentials: true,
-  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
-  allowedHeaders: ['Content-Type', 'Authorization']
-};
-app.use(cors(corsOptions));
+  exposedHeaders: ["set-cookie"],
+}));
 app.use(helmet());
 app.use(bodyParser.json());
 
