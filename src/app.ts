@@ -17,8 +17,7 @@ connectDB();
 const corsOptions = {
   origin: "*",
   credentials: true,
-  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
-  allowedHeaders: ['Content-Type', 'Authorization']
+  exposedHeaders: ["set-cookie"]
 };
 app.use(cors(corsOptions));
 app.use(helmet());
