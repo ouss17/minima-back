@@ -17,7 +17,8 @@ connectDB();
 const corsOptions = {
   origin: [
     'https://minima-app-frontend.vercel.app',
-    'http://localhost:3000'
+    'http://localhost:3000',
+    "https://minima-front-coral.vercel.app"
   ],
   credentials: true,
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
