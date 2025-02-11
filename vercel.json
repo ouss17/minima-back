@@ -15,6 +15,10 @@
                     "value": "https://minima-front-coral.vercel.app"
                 },
                 {
+                    "key": "Access-Control-Allow-Origin",
+                    "value": "https://minima-front-coral.vercel.app/auth"
+                },
+                {
                     "key": "Access-Control-Allow-Methods",
                     "value": "GET, POST, PUT, DELETE, OPTIONS"
                 },
