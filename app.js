@@ -24,7 +24,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // Configure CORS
 app.use(cors({ 
-  origin: ['https://minima-front-coral.vercel.app', 'https://minima-front-coral.vercel.app/auth'],
+  origin: ['https://minima-front-coral.vercel.app', 'https://minima-front-coral.vercel.app/auth','http://localhost:5173', 'http://localhost:5173/auth'],
   credentials: true,
   exposedHeaders: ["set-cookie"],
 }));
